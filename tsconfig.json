@@ -30,7 +30,7 @@
         "./src/controllers/*"
       ],
       "models/*": [
-        "./src/models/*"
+        "src/modules/models/*"
       ],
       "config/*": [
         "./src/config/*"
@@ -39,7 +39,7 @@
         "./src/utils/*"
       ],
       "repositories/*": [
-        "./src/repositories/*"
+        "src/modules/cars/repositories/*"
       ],
     }, /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
