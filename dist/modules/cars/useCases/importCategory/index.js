@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.importCategoryController = void 0;
+var CategoriesRepository_1 = require("../../repositories/implementations/CategoriesRepository");
+var ImportCategoryController_1 = require("./ImportCategoryController");
+var ImportCategoryUseCase_1 = require("./ImportCategoryUseCase");
+var categoriesRepository = CategoriesRepository_1.CategoriesRepository.getInstance();
+var importCategoryUseCase = new ImportCategoryUseCase_1.ImportCategoryUseCase(categoriesRepository);
+var importCategoryController = new ImportCategoryController_1.ImportCategoryController(importCategoryUseCase);
+exports.importCategoryController = importCategoryController;

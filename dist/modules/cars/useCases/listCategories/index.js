@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listCategoriesController = void 0;
+var CategoriesRepository_1 = require("../../repositories/implementations/CategoriesRepository");
+var ListCategoriesUseCase_1 = require("./ListCategoriesUseCase");
+var ListCategoriesController_1 = require("./ListCategoriesController");
+var categoriesRepository = CategoriesRepository_1.CategoriesRepository.getInstance();
+var listCategoriesUseCase = new ListCategoriesUseCase_1.ListCategoriesUseCase(categoriesRepository);
+var listCategoriesController = new ListCategoriesController_1.ListCategoriesController(listCategoriesUseCase);
+exports.listCategoriesController = listCategoriesController;
